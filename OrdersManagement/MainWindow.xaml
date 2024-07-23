@@ -1,0 +1,45 @@
+﻿<Window x:Class="OrdersManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrdersManagement"
+        xmlns:userControls="clr-namespace:OrdersManagement.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="900"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Container Grid -->
+    <Grid x:Name="GridContainer">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{Binding FirstColumn, UpdateSourceTrigger=PropertyChanged}"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Side Navigation Section -->
+        <Grid x:Name="SideNavContainer" Grid.Column="0">
+            
+            <!-- Vertical Navigation Menu -->
+            <userControls:SideNavigation/>
+
+
+        </Grid>
+
+        <!-- Content Section -->
+        <Grid Grid.Column="1" Background="DarkSlateGray" >
+            <!-- Navigation Open Close -->
+            <Button x:Name="OpenCloseNav" Content="Menu" Height="20" Width="100" HorizontalAlignment="Right" Click="OpenCloseNav_Click"/>
+
+            <!-- Window Size Control -->
+            <Button x:Name="Maxbtn" Content="Max-Min" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,100,0,0" Click="Maxbtn_Click"/>
+
+            <!-- Close App -->
+            <Button x:Name="CloseBtn" Content="Close" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,200,0,0" Click="CloseBtn_Click"/>
+        </Grid>
+        
+    </Grid>
+
+
+</Window>

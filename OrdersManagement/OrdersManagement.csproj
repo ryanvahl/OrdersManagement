@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Bahiana-Regular.ttf" />
+    <None Remove="Images\boxes.png" />
+    <None Remove="Images\exit.png" />
+    <None Remove="Images\house-blank.png" />
+    <None Remove="Images\info.png" />
+    <None Remove="Images\star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Bahiana-Regular.ttf" />
+    <Resource Include="Images\boxes.png" />
+    <Resource Include="Images\exit.png" />
+    <Resource Include="Images\house-blank.png" />
+    <Resource Include="Images\info.png" />
+  </ItemGroup>
+
+</Project>
